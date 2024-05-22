@@ -143,3 +143,11 @@ Entrer l'URL de l'image Docker sur Docker Hub.
 ```
 hub.docker.com/r/<username>/<repository>
 ```
+
+## Github Actions
+
+Créer un fichier `.github/workflows/deploy.yml` à la racine du projet.
+
+```yml
+TODO
+```
