@@ -32,7 +32,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tage: arctenis/django-cicd:latest
+          tag: arctenis/django-cicd:latest
 
 
 
