@@ -1,4 +1,11 @@
-# Contents
+
+# Création d'un pipeline CI/CD pour un projet Django
+
+> [!WARNING]
+> Attention, ce tutoriel est en cours de rédaction. Le projet Django tel qu'il
+> est ici présent n'est pas configuré pour être en production.
+
+## Sommaire
 
 - [Création d'un pipeline CI/CD pour un projet Django](#cration-dun-pipeline-cicd-pour-un-projet-django)
     - [Objectif](#objectif)
@@ -8,9 +15,6 @@
     - [Docker](#docker)
     - [Render](#render)
     - [Github Actions](#github-actions)
-
-# Création d'un pipeline CI/CD pour un projet Django
-
 
 ## Objectif
 
@@ -198,19 +202,19 @@ Créer un compte sur Render si ce n'est déjà fait.
 
 A partir du dashboard, créer un nouveau service web. 
 
-[New web service on Render](docs/render_new_service.png)
+![New web service on Render](docs/render_new_service.png)
 
 Choisir de déployer à partir d'une image
 provenant d'un registre.
 
-[Deploy from a registry](docs/render_deploy_from_registry.png)
+![Deploy from a registry](docs/render_deploy_from_registry.png)
 
 
 Entrer l'URL de l'image Docker sur Docker Hub. 
 
 Sur Docker Hub, utiliser le lien public de l'image Docker sur Docker Hub.
 
-[Docker Hub image URL](docs/dockerhub_public_view.png)
+![Docker Hub image URL](docs/dockerhub_public_view.png)
 
 Cliquer sur "Next".
 
@@ -230,7 +234,7 @@ Copier le webhook fourni par Render afin de déclencher le déploiement à chaqu
 Sur Docker Hub, dans la section **Webhooks**, créer un nouveau webhook en lui
 donnant un nom et en entrant l'URL fourni par Render.
 
-[Webhook on Docker Hub](docs/dockerhub_create_webhook.png)
+![Webhook on Docker Hub](docs/dockerhub_create_webhook.png)
 
 Dans les paramètres de votre projet Django, ajouter à la liste ALLOWED_HOSTS de
 votre fichier settings.py l'URL de votre service Render.
