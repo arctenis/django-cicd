@@ -1,9 +1,15 @@
-
 # Création d'un pipeline CI/CD pour un projet Django
+
+## Roadmap
 
 > [!WARNING]
 > Attention, ce tutoriel est en cours de rédaction. Le projet Django tel qu'il
 > est ici présent n'est pas configuré pour être en production.
+
+- [ ] Configuration de PostgreSQL
+- [ ] Utilisation de Docker Compose
+- [ ] Variables d'environnement
+- [ ] Configuration de Django pour la production
 
 ## Sommaire
 
@@ -20,7 +26,7 @@
 
 Mettre en place un pipeline CI/CD pour un projet Django. Le pipeline doit
 automatiser les tâches suivantes :
-- Construire l'image Docker
+- Construire l'image Docker suite à un Push
 - Pousser l'image Docker sur Docker Hub
 - Déployer l'image Docker sur Render
 - Mettre à jour l'image Docker sur Render à chaque push sur la branche principale
@@ -318,6 +324,6 @@ Sélectionner les permissions *Read & Write*.
 Copier le token et créer un nouveau secret sur Github avec pour nom
 `DOCKERHUB_TOKEN`, le même quand que celui utilisé dans le fichier de workflow.
 
-[Github repository secrets](docs/github_repo_secrets.png)
+![Github repository secrets](docs/github_repo_secrets.png)
 
 Pour voir le pipeline en action, aller dans l'onglet *Actions* du dépôt sur Github.
